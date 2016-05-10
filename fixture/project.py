@@ -6,7 +6,7 @@ class ProjectHelper:
 
     def add_project(self, project):
         wd = self.app.wd
-        wd.transition_contact_page(self)
+        self.transition_contact_page()
         wd.find_element_by_xpath("//table[3]/tbody/tr[1]/td/form/input[2]").click()
         self.change_field_value_project("name", project.name)
         wd.find_element_by_css_selector("input.button").click()
